@@ -15,3 +15,7 @@ Un CRUD minimaliste est mis en place. Testez les URL suivantes :
 - /fournisseur
 
 Ajoutez quelques éléments dans les deux tables.
+
+Vous devriez aussi pouvoir accèder à la page de l'API (vide pour le moment)
+
+- /api

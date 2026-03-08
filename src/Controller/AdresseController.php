@@ -34,7 +34,7 @@ class AdresseController extends AbstractController
             return $this->redirectToRoute('app_adresse_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('adresse/new.html.twig', [
+        return $this->render('adresse/new.html.twig', [
             'adresse' => $adresse,
             'form' => $form,
         ]);
@@ -60,9 +60,9 @@ class AdresseController extends AbstractController
             return $this->redirectToRoute('app_adresse_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('adresse/edit.html.twig', [
+        return $this->render('adresse/edit.html.twig', [
             'adresse' => $adresse,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 

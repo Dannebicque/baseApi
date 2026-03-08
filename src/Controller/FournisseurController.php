@@ -34,9 +34,9 @@ class FournisseurController extends AbstractController
             return $this->redirectToRoute('app_fournisseur_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('fournisseur/new.html.twig', [
+        return $this->render('fournisseur/new.html.twig', [
             'fournisseur' => $fournisseur,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
@@ -60,7 +60,7 @@ class FournisseurController extends AbstractController
             return $this->redirectToRoute('app_fournisseur_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('fournisseur/edit.html.twig', [
+        return $this->render('fournisseur/edit.html.twig', [
             'fournisseur' => $fournisseur,
             'form' => $form,
         ]);
